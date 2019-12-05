@@ -8,31 +8,15 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../register.php">Register</a>
+                    <a class="nav-link" href="register.php">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="transfer.php">Transfer</a>
                 </li>
             </ul>
-
-            <ul class="navbar-nav ml-auto text-center">
-                <?php if (isset($_SESSION['user_id'])) : ?>
-                    <li class="nav-item text-center">
-                        <a class="nav-link" href="#">Welcome <?php echo $_SESSION['user_name']; ?></a>
-                    </li>
-                    <li class="nav-item text-center">
-                        <a class="nav-link" href="#">Logout</a>
-                    </li>
-                <?php else : ?>
-                    <li class="nav-item text-center">
-                        <a class="nav-link" href="#">Register</a>
-                    </li>
-                    <li class="nav-item text-center">
-                        <a class="nav-link" href="#">Login</a>
-                    </li>
-                <?php endif; ?>
-            </ul>
-
         </div>
     </div>
 </nav>

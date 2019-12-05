@@ -39,6 +39,37 @@ class User
         return $stmt;
     }
 
+    // Get Single User
+    public function read_single()
+    {
+        // Create query
+        $query = 'SELECT account_id, firstname, lastname, phone, address, gender, balance, date_created 
+            FROM ' . $this->table . '
+            WHERE
+            account_id = ?
+            LIMIT 0,1';
+
+        // Prepare Statement
+        $stmt = $this->conn->prepare($query);
+
+        // Bind ID
+        $stmt->bindParam(1, $this->account_id);
+
+        // Execute query
+        $stmt->execute();
+
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        // Set properties
+        $this->firstname = $row['firstname'];
+        $this->lastname = $row['lastname'];
+        $this->phone = $row['phone'];
+        $this->address = $row['address'];
+        $this->gender = $row['gender'];
+        $this->balance = $row['balance'];
+        $this->date_created = $row['date_created'];
+    }
+
     // Create Post
     public function create()
     {

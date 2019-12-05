@@ -30,13 +30,14 @@
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                     </select>
-                    <br />
-                    <div class="row">
-                        <div class="col">
-                            <input type="submit" name="submit" value="Register" class="btn btn-success btn-block form-control-lg">
-                        </div>
-
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col">
+                        <input type="submit" name="submit" value="Register" class="btn btn-success btn-block form-control-lg">
                     </div>
+
+                </div>
             </form>
         </div>
     </div>
