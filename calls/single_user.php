@@ -11,7 +11,7 @@ if (isset($_GET['account_id'])) {
 //****************************** Users API ******************************
 
 
-$service_url = "http://localhost/bankapp/api/users/read_single.php?account_id=.'$account_id'";
+$service_url = "http://localhost/bankapp/api/users/read_single.php?account_id=$account_id";
 
 $curl = curl_init($service_url);
 
