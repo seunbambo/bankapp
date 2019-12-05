@@ -21,11 +21,9 @@ curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
 
 $curl_response = curl_exec($curl);
-print_r($curl_response) . "<br><br>";
+//print_r($curl_response) . "<br><br>";
 
 //die();
 $output = preg_split('/(\r?\n){2}/', $curl_response, 2);
-$data = json_decode($output[0])->data;
-print_r($output);
-$count = count($data);
-//print_r($count);
+$current_balance = json_decode($output[0]);
+print_r($current_balance->balance);
