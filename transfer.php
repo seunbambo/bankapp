@@ -4,7 +4,7 @@
         <div class="card card-body bg-light mt-0">
             <h2>Transfer</h2>
             <p>Please fill out this form</p>
-            <form action="calls/register_account.php" method="POST">
+            <form action="calls/single_user.php" method="POST">
                 <div class="form-group">
                     <label for="beneficiary">Beneficiary Account ID: <sup>*</sup></label>
                     <input type="text" name="beneficiary" class="form-control form-control-lg" required>
@@ -18,7 +18,7 @@
                 <br />
                 <div class="row">
                     <div class="col">
-                        <input type="submit" name="submit" value="Register" class="btn btn-success btn-block form-control form-control-lg" />
+                        <input type="submit" name="submit" value="Transfer" class="btn btn-success btn-block form-control form-control-lg" />
                     </div>
 
                 </div>
