@@ -1,22 +1,28 @@
 <?php
-error_reporting(E_ERROR | E_PARSE);
-session_start();
+//error_reporting(E_ERROR | E_PARSE);
+//session_start();
 
-if (isset($_POST['beneficiary'])) {
-    $beneficiary = $_POST['beneficiary'];
+
+if (isset($_POST['account_id'])) {
+    $account_id = $_POST['account_id'];
     $amount = $_POST['amount'];
 }
+
+
+include 'single_user.php';
+
+$updated_balance = $current_balance + $amount;
 
 //****************************** Create User API ******************************
 
 
-$service_url = 'http://localhost/bankapp/api/transactions/update.php';
+$service_url = 'http://localhost/bankapp/api/users/update.php';
 
 $curl = curl_init($service_url);
 
 $curl_post_data = [
-    "beneficiary" => $beneficiary,
-    "amount" => $amount
+    "account_id" => $account_id,
+    "balance" => $updated_balance
 ];
 
 
@@ -35,6 +41,6 @@ $curl_response = curl_exec($curl);
 //print_r($output);
 curl_close($curl);
 
-if (!$output) {
+if ($output) {
     header('Location: ../index.php');
 }

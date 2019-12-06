@@ -3,9 +3,9 @@ error_reporting(E_ERROR | E_PARSE);
 session_start();
 
 
-if (isset($_GET['account_id'])) {
-    $account_id = $_GET['account_id'];
-}
+// if (isset($_GET['account_id'])) {
+//     $account_id = $_GET['account_id'];
+// }
 
 
 //****************************** Users API ******************************
@@ -25,5 +25,6 @@ $curl_response = curl_exec($curl);
 
 //die();
 $output = preg_split('/(\r?\n){2}/', $curl_response, 2);
-$current_balance = json_decode($output[0]);
-print_r($current_balance->balance);
+$data = json_decode($output[0]);
+$current_balance = $data->balance;
+//print_r($current_balance);

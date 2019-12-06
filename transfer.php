@@ -4,10 +4,10 @@
         <div class="card card-body bg-light mt-0">
             <h2>Transfer</h2>
             <p>Please fill out this form</p>
-            <form action="calls/single_user.php" method="POST">
+            <form action="calls/transfer_call.php" method="POST">
                 <div class="form-group">
                     <label for="beneficiary">Beneficiary Account ID: <sup>*</sup></label>
-                    <input type="text" name="beneficiary" class="form-control form-control-lg" required>
+                    <input type="text" name="account_id" class="form-control form-control-lg" required>
                 </div>
                 <div class="form-group">
                     <label for="amount">Amount: <sup>*</sup></label>
