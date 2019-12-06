@@ -3,11 +3,6 @@ error_reporting(E_ERROR | E_PARSE);
 session_start();
 
 
-// if (isset($_GET['account_id'])) {
-//     $account_id = $_GET['account_id'];
-// }
-
-
 //****************************** Users API ******************************
 
 
